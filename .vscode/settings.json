@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "env\\Scripts\\python.exe",
+    "python.languageServer": "Pylance",
+    "emmet.includeLanguages": {"django-html":"html"}
+}
