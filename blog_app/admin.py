@@ -3,8 +3,9 @@ from django.contrib import admin
 
 # Register your models here.
 
+
 class BlogAdmin(admin.ModelAdmin):
-      list = "__all__"
+    list = "__all__"
 
 
-admin.site.register(Blog,BlogAdmin)
+admin.site.register(Blog, BlogAdmin)

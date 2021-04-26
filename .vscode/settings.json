@@ -1,5 +1,12 @@
 {
     "python.pythonPath": "env\\Scripts\\python.exe",
     "python.languageServer": "Pylance",
-    "emmet.includeLanguages": {"django-html":"html"}
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "cSpell.words": [
+        "runserver"
+    ],
 }

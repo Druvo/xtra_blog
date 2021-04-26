@@ -6,7 +6,6 @@ $(function() {
     
       $("html").click(function(e) {
         var header = document.getElementById("tm-header");
-    
         if (!header.contains(e.target)) {
           $(".tm-header").removeClass("show");
         }
