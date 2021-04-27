@@ -17,14 +17,12 @@
 
   <img alt="License" src="https://img.shields.io/github/license/Druvo/xtra_blog?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/Druvo/xtra_blog?color=56BEB8" /> -->
+  <!--<img alt="Github issues" src="https://img.shields.io/github/issues/Druvo/xtra_blog?color=56BEB8" />
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/Druvo/xtra_blog?color=56BEB8" /> -->
+  <img alt="Github forks" src="https://img.shields.io/github/forks/Druvo/xtra_blog?color=56BEB8" />-->
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/Druvo/xtra_blog?color=56BEB8" /> -->
+  <img alt="Github stars" src="https://img.shields.io/github/stars/Druvo/xtra_blog?color=56BEB8" />
 </p>
-
-# Status
 
  <h4 align="center">
 	🚧  Xtra_blog 🚀 Under construction...  🚧
@@ -58,14 +56,17 @@ This is a test project to do some experiment and learn!!!
 
 The following tools were used in this project:
 
-- [Django](https://djangoproject.com/)
-- [python](https://www.python.org/)
-- [pip](https://pypi.org)
-- [Github](https://github.com/)
+- [Django 3.2](https://djangoproject.com/)
+- [python 3](https://www.python.org/)
+- [pip 21.1](https://pypi.org)
+- [asgiref 3.3.4](https://pypi.org)
+- [pytz 2021.1](https://pypi.org)
+- [sqlparse 0.4.1](https://pypi.org)
+- [Github](https://pypi.org)
 
 ## :white_check_mark: Requirements
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [python](https://python.org/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [python](https://python.org/) and [Django](https://www.djangoproject.com/) installed.
 
 ## :checkered_flag: Starting
 
@@ -82,7 +83,7 @@ $ pip install -r requirements.txt
 # Run the project
 $ python manage.py runserver
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:8000>
 ```
 
 ## :memo: License
