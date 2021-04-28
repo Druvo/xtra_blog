@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from blog_app.models import Blog
+from blog_app.models import Post
 
 # Create your views here.
 
@@ -12,8 +12,8 @@ def index(request):
     Returns:
         renders object: html with data
     """
-    posts = Blog.objects.all()
-    return render(request, "index.html", context={"blog": posts})
+    posts = Post.objects.all()
+    return render(request, "blog/post.html", context={"blog": posts})
 
 
 def posts(request):

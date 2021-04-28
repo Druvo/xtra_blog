@@ -1,8 +1,15 @@
+<!-- Extanding form base template -->
+{% extends "index.html" %}
+<!-- Loading stastic files -->
 {% load static %}
+<!-- Page Title -->
+{% block title %}ALL Posts{% endblock title %}
+<!-- main content of the websit -->
+{% block content %}
 <!-- Search form -->
 <div class="row tm-row">
   <div class="col-12">
-    <form method="GET" class="form-inline tm-mb-80 tm-search-form">
+    <form method="GET" class="form-inline tm-search-form">
       <input
         class="form-control tm-search-input"
         name="query"
@@ -16,11 +23,13 @@
     </form>
   </div>
 </div>
+<!-- Posts -->
 
 <div class="row tm-row">
-  <article class="col-12 col-md-6 tm-post">
+  {% for post in blog %}
+  <article class="col-12 col-md-4 tm-post">
     <hr class="tm-hr-primary" />
-    <a href="post.html" class="effect-lily tm-post-link tm-pt-60">
+    <a href="post.html" class="effect-lily tm-post-link">
       <div class="tm-post-link-inner">
         <img
           src="{% static 'img/img-06.jpg' %}"
@@ -28,29 +37,23 @@
           class="img-fluid"
         />
       </div>
-      <span class="position-absolute tm-new-badge">New</span>
-      <h2 class="tm-pt-30 tm-color-primary tm-post-title">
-        Simple and useful HTML layout
-      </h2>
+      <span class="position-absolute tm-new-badge">{{ post.title }}</span>
+      <h3 class="tm-color-primary tm-post-title">{{ post.type }}</h3>
     </a>
-    <p class="tm-pt-30">
-      There is a clickable image with beautiful hover effect and active title
-      link for each post item. Left side is a sticky menu bar. Right side is a
-      blog content that will scroll up and down.
-    </p>
-    <div class="d-flex justify-content-between tm-pt-45">
-      <span class="tm-color-primary">Travel . Events</span>
-      <span class="tm-color-primary">June 24, 2020</span>
+    <p>{{ post.excerpt }}</p>
+    <div class="d-flex justify-content-between">
+      <span class="tm-color-primary">{{ post.date }}</span>
+      <span class="tm-color-primary">- {{ post.author }}</span>
     </div>
     <hr />
     <div class="d-flex justify-content-between">
       <span>36 comments</span>
-      <span>by Admin Nat</span>
     </div>
   </article>
+  {% endfor %}
 </div>
-
-<div class="row tm-row tm-mt-100 tm-mb-75">
+<!-- Pagination -->
+<div class="row tm-row">
   <div class="tm-prev-next-wrapper">
     <a
       href="#"
@@ -79,3 +82,5 @@
     </nav>
   </div>
 </div>
+
+{% endblock content %}

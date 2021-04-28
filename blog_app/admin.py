@@ -1,11 +1,13 @@
-from blog_app.models import Blog
+from blog_app.models import Author, Post, Tag
 from django.contrib import admin
 
 # Register your models here.
 
 
-class BlogAdmin(admin.ModelAdmin):
+class PostAdmin(admin.ModelAdmin):
     list = "__all__"
 
 
-admin.site.register(Blog, BlogAdmin)
+admin.site.register(Post, PostAdmin)
+admin.site.register(Author)
+admin.site.register(Tag)

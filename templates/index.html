@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xtra Blog</title>
+    <title>{% block title %}{% endblock title %} | Xtra Blog</title>
     <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}" />
     <!-- https://fontawesome.com/ -->
     <link
@@ -21,10 +21,12 @@
 
     <div class="container-fluid">
       <main class="tm-main">
-        {% include 'blog/post.html' %} {% include 'blocks/footer.html' %}
+        <!-- main content block of the templates -->
+        {% block content %} {% endblock content %}
       </main>
     </div>
 
+    {% include 'blocks/footer.html' %}
     <script src="{% static 'js/jquery.min.js' %} "></script>
     <script src="{% static 'js/templatemo-script.js' %} "></script>
   </body>
