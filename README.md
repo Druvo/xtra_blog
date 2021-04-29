@@ -52,7 +52,7 @@ This is a test project to do some experiment and learn!!!
 :heavy_check_mark: Blog Post management;\
 :heavy_check_mark: Contract;
 
-## :rocket: Technologies
+## :white_check_mark: Requirements
 
 The following tools were used in this project:
 
@@ -63,10 +63,6 @@ The following tools were used in this project:
 - [pytz 2021.1](https://pypi.org)
 - [sqlparse 0.4.1](https://pypi.org)
 - [Github](https://pypi.org)
-
-## :white_check_mark: Requirements
-
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [python](https://python.org/) and [Django](https://www.djangoproject.com/) installed.
 
 ## :checkered_flag: Starting
 
