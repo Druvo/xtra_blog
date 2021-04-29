@@ -62,7 +62,6 @@ The following tools were used in this project:
 - [asgiref 3.3.4](https://pypi.org)
 - [pytz 2021.1](https://pypi.org)
 - [sqlparse 0.4.1](https://pypi.org)
-- [Github](https://pypi.org)
 
 ## :checkered_flag: Starting
 
