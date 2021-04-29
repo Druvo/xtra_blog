@@ -231,11 +231,11 @@ ul {
 .tm-post { margin-bottom: 75px; }
 
 .tm-new-badge {
-    top: 15px;
-    background-color: #0CC;
+    bottom: 0px;
+    background-color: #005B5B70;
     color: white;
     padding: 5px 10px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .tm-post-title {

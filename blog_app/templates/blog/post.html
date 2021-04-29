@@ -32,7 +32,7 @@
     <a href="post.html" class="effect-lily tm-post-link">
       <div class="tm-post-link-inner">
         <img
-          src="{% static 'img/img-06.jpg' %}"
+          src="{% static 'img/'|add:post.image_name %}"
           alt="Image"
           class="img-fluid"
         />

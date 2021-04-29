@@ -5,7 +5,9 @@ from django.contrib import admin
 
 
 class PostAdmin(admin.ModelAdmin):
-    list = "__all__"
+    list_display = ("excerpt", "author", "date", "date")
+    list_filter = ("author", "tags", "date")
+    prepopulated_fields = {"slug": ("title",)}
 
 
 admin.site.register(Post, PostAdmin)

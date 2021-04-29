@@ -12,7 +12,7 @@ def index(request):
     Returns:
         renders object: html with data
     """
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by("-date")[:6]
     return render(request, "blog/post.html", context={"blog": posts})
 
 
