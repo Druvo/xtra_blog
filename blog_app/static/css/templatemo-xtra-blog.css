@@ -27,8 +27,7 @@ hr {
 
 .tm-header {
     background-color: #0CC;
-    color: white;
-    
+    color: #ffffff;
     position: fixed;
     top: 0;
     left: 0;
@@ -61,7 +60,7 @@ hr {
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background-color: white;    
+    background-color:#191919;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,7 +70,7 @@ hr {
 
 .tm-main {
     margin-left: 400px;
-    padding: 35px;
+    padding: 35px 80px;
 }
 
 .tm-post { max-width: 470px; }
@@ -87,11 +86,10 @@ hr {
 }
 
 .tm-nav-link {
-    color: white;
+    color: #191919;
     background-color: transparent;
     height: 50px;
     width: 100%;
-    max-width: 200px;    
     display: flex;
     align-items: center;
     padding: 5px;
@@ -101,7 +99,7 @@ hr {
 .tm-nav-item.active .tm-nav-link
  {
     color: #0CC;
-    background-color: white;
+    background-color: #191919;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -116,8 +114,8 @@ hr {
     height: 50px;
     display: block;
     border: 1px solid white;
-    margin-left: 10px;
-    margin-top: -43px;
+    margin-left: 20px;
+    margin-top: -40px;
     position: absolute;
     z-index: -1000;
 }
@@ -136,7 +134,7 @@ ul {
 
 .tm-social-link {
     display: inline-block;
-    background-color: white;
+    background-color: #191919;
     font-size: 1.4rem;
     width: 50px;
     height: 50px;
@@ -232,10 +230,11 @@ ul {
 
 .tm-new-badge {
     bottom: 0px;
-    background-color: #005B5B70;
+    background-color: #00000078;
     color: white;
     padding: 5px 10px;
     font-size: 1.4rem;
+    width: 100%;
 }
 
 .tm-post-title {
@@ -429,10 +428,10 @@ a:hover figcaption { color: #056767; }
 .tm-contact-form .form-group { display: flex; }
 
 @media (max-width: 1540px) {
-    .tm-header { width: 250px; }
+    .tm-header { width: 300px; }
 
     .tm-main {
-        margin-left: 250px;
+        margin-left: 275px;
         width: calc(100% - 250px);
     }
 }

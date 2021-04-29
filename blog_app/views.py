@@ -13,12 +13,17 @@ def index(request):
         renders object: html with data
     """
     posts = Post.objects.all().order_by("-date")[:6]
-    return render(request, "blog/post.html", context={"blog": posts})
+    return render(request, "blog/home.html", context={"blog": posts})
 
 
-def posts(request):
-    return render(request, "visit/index.html")
+def post_detail(request, slug):
+    post = Post.objects.get(slug=slug)
+    return render(request, "blog/post.html", context={"post": post})
 
 
-def post_detail(request):
-    return render(request, "visit/index.html")
+def about(request):
+    return render(request, "blog/about.html")
+
+
+def contact(request):
+    return render(request, "blog/contact.html")
