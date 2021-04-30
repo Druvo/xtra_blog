@@ -32,7 +32,15 @@
     <p>{{ post.excerpt }}</p>
     <div class="d-flex justify-content-between">
       <span class="tm-color-primary">{{ post.date }}</span>
-      <span class="tm-color-primary">- {{ post.author }}</span>
+      <span class="tm-color-primary">
+        -
+        <a
+          href="mailto:{{ post.author.email_address }}"
+          class="tm-color-primary"
+        >
+          {{ post.author }}
+        </a></span
+      >
     </div>
     <hr />
     <div class="d-flex justify-content-between">

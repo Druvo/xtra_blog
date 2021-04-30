@@ -1,30 +1,30 @@
 <!-- Pagination -->
 <div class="row tm-row">
   <div class="tm-prev-next-wrapper">
+    {% if blog.has_previous %}
+    <a href="?page=1" class="mb-2 tm-btn tm-btn-primary tm-prev-next tm-mr-20"
+      >&laquo; first</a
+    >
     <a
-      href="#"
-      class="mb-2 tm-btn tm-btn-primary tm-prev-next disabled tm-mr-20"
+      href="?page={{ blog.previous_page_number }}"
+      class="mb-2 tm-btn tm-btn-primary tm-prev-next tm-mr-20"
       >Prev</a
     >
-    <a href="#" class="mb-2 tm-btn tm-btn-primary tm-prev-next">Next</a>
+    {% endif %} {% if blog.has_next %}
+    <a
+      href="?page={{ blog.next_page_number }}"
+      class="mb-2 tm-btn tm-btn-primary tm-prev-next"
+      >next</a
+    >
+    <a
+      href="?page={{ blog.paginator.num_pages }}"
+      class="mb-2 tm-btn tm-btn-primary tm-prev-next"
+      >last &raquo;</a
+    >
+    {% endif %}
   </div>
   <div class="tm-paging-wrapper">
-    <span class="d-inline-block mr-3">Page</span>
-    <nav class="tm-paging-nav d-inline-block">
-      <ul>
-        <li class="tm-paging-item active">
-          <a href="#" class="mb-2 tm-btn tm-paging-link">1</a>
-        </li>
-        <li class="tm-paging-item">
-          <a href="#" class="mb-2 tm-btn tm-paging-link">2</a>
-        </li>
-        <li class="tm-paging-item">
-          <a href="#" class="mb-2 tm-btn tm-paging-link">3</a>
-        </li>
-        <li class="tm-paging-item">
-          <a href="#" class="mb-2 tm-btn tm-paging-link">4</a>
-        </li>
-      </ul>
-    </nav>
+    <span class="d-inline-block mr-3"> Page {{ blog.number }} of {{ blog.paginator.num_pages }}.</span>
   </div>
+</div>
 </div>

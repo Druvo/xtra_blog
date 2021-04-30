@@ -26,7 +26,15 @@
     <div class="tm-post-full">
       <div class="mb-4">
         <h2 class="pt-2 tm-color-primary tm-post-title">{{ post.title }}</h2>
-        <p class="tm-mb-40">{{ post.date }} posted by {{ post.author }}</p>
+        <p class="tm-mb-40">
+          {{ post.date }} posted by
+          <a
+            href="mailto:{{ post.author.email_address }}"
+            class="tm-color-primary"
+          >
+            {{ post.author }}
+          </a>
+        </p>
         <p>{{ post.content }}</p>
         <span class="d-block text-right tm-color-primary">
           {% for tag in post.tags.all %}{{ tag.caption }} . {% endfor %}

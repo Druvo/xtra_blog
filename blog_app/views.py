@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from blog_app.models import Post
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
 
@@ -12,8 +13,12 @@ def index(request):
     Returns:
         renders object: html with data
     """
-    posts = Post.objects.all().order_by("-date")[:6]
-    return render(request, "blog/home.html", context={"blog": posts})
+    posts = Post.objects.all().order_by("-date")
+    paginator = Paginator(posts, 6)  # Show 25 contacts per page.
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, "blog/home.html", context={"blog": page_obj})
 
 
 def post_detail(request, slug):
