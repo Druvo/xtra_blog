@@ -25,7 +25,11 @@
   <div class="col-lg-8 tm-post-col">
     <div class="tm-post-full">
       <div class="mb-4">
-        <h2 class="pt-2 tm-color-primary tm-post-title">{{ post.title }}</h2>
+        <h2 class="pt-2 tm-color-primary tm-post-title">
+          {{ post.title }} {% for tag in post.tags.all %}
+          <a href="{{ tag }}" class="badge badge-primary">{{ tag }}</a>
+          {% endfor %}
+        </h2>
         <p class="tm-mb-40">
           {{ post.date }} posted by
           <a
