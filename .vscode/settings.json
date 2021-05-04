@@ -9,4 +9,5 @@
     "cSpell.words": [
         "runserver"
     ],
+    "python.formatting.provider": "autopep8",
 }
